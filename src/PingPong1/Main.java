@@ -4,10 +4,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Main {
     public static void main(String[] args) {
-        AtomicBoolean flag = new AtomicBoolean(false);
+        AtomicBoolean flag = new AtomicBoolean(true);
         new Thread(()-> new Ping(flag).game()).start();
         new Thread(()-> new Pong(flag).game()).start();
-        //test
     }
 
     static class Ping{
