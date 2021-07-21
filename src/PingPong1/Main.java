@@ -7,6 +7,7 @@ public class Main {
         AtomicBoolean flag = new AtomicBoolean(true);
         new Thread(()-> new Ping(flag).game()).start();
         new Thread(()-> new Pong(flag).game()).start();
+
     }
 
     static class Ping{
